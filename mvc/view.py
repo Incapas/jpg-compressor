@@ -82,8 +82,8 @@ class ApplicationView:
         # --- CADRE PRINCIPAL (OPTIONS DE COMPRESSION) ---
         # --------------------------------------------------------------------------------------
 
-        # Création du LabelFrame principal pour les réglages de compression
-        settings_frame: Label = ttk.LabelFrame(
+        # Création du Labelframe principal pour les réglages de compression
+        settings_frame: Label = ttk.Labelframe(
             self.master, 
             text="Compression", 
             padding=15, 
@@ -95,8 +95,8 @@ class ApplicationView:
         horizontal_master_frame: ttk.Frame = ttk.Frame(settings_frame)
         horizontal_master_frame.pack(padx=10, pady=10, anchor="center") 
 
-        # BLOC 1 : METER DANS UN LABELFRAME (Contrôles Principaux)
-        meter_group_frame: Label = ttk.LabelFrame(horizontal_master_frame, text="Contrôles Principaux", padding=10, bootstyle="info")
+        # BLOC 1 : METER DANS UN Labelframe (Contrôles Principaux)
+        meter_group_frame: Label = ttk.Labelframe(horizontal_master_frame, text="Contrôles Principaux", padding=10, bootstyle="info")
         meter_group_frame.pack(side="left", padx=15) 
 
         # --- Qualité de compression (Meter) ---
@@ -128,7 +128,7 @@ class ApplicationView:
         self.resize_meter.pack()
 
         # BLOC 2 : FORMAT (RADIOBUTTONS)
-        format_block_frame: Label = ttk.LabelFrame(horizontal_master_frame, text="Format de sortie", padding=20, bootstyle="info") 
+        format_block_frame: Label = ttk.Labelframe(horizontal_master_frame, text="Format de sortie", padding=20, bootstyle="info") 
         format_block_frame.pack(side="left", padx=15, fill="y", ipadx=30)
 
         # Création des Radiobuttons pour le choix du format (JPG, JPEG, WEBP)
@@ -143,7 +143,7 @@ class ApplicationView:
             ).pack(pady=5, padx=5, anchor="w")
 
         # BLOC 3 : OPTIMISATION (CHECKBUTTONS)
-        fine_opt_block_frame: Label = ttk.LabelFrame(horizontal_master_frame, text="Optimisation", padding=20, bootstyle="info")
+        fine_opt_block_frame: Label = ttk.Labelframe(horizontal_master_frame, text="Optimisation", padding=20, bootstyle="info")
         fine_opt_block_frame.pack(side="left", padx=15, fill="y")
 
         # Checkbutton pour l'encodage optimisé
@@ -175,8 +175,8 @@ class ApplicationView:
         # --- CADRE 2 : CONFIGURATION DE L'EXPORTATION (Destination + Options) ---
         # --------------------------------------------------------------------------------------
 
-        # Création du LabelFrame pour les réglages d'exportation
-        export_config_frame: Label = ttk.LabelFrame(
+        # Création du Labelframe pour les réglages d'exportation
+        export_config_frame: Label = ttk.Labelframe(
             self.master, 
             text="Exportation", 
             padding=15, 
